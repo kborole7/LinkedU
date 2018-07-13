@@ -1,0 +1,474 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B36B607-1F5E-446A-B80C-8B762C89D4CF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KLinkedU</RootNamespace>
+    <AssemblyName>KLinkedU</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.6783, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Twilio, Version=5.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.5.9.1\lib\net451\Twilio.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Add_University.aspx" />
+    <Content Include="App_Data\LinkedUDatabase.mdf" />
+    <Content Include="App_Data\LinkedUDatabase_log.ldf">
+      <DependentUpon>LinkedUDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="images\777Chrysanthemum.jpg" />
+    <Content Include="images\777rohan.png" />
+    <Content Include="images\777Tulips.jpg" />
+    <Content Include="images\Berkeley-college.jpg" />
+    <Content Include="images\Boston.jpg" />
+    <Content Include="images\Chrysanthemum.jpg" />
+    <Content Include="images\Columbia.jpg" />
+    <Content Include="images\Cornell.jpg" />
+    <Content Include="images\Desert.jpg" />
+    <Content Include="images\Dheeraj.jpg" />
+    <Content Include="images\djpatildheeraj.png" />
+    <Content Include="images\generic-user.jpg" />
+    <Content Include="images\generic-user.png" />
+    <Content Include="images\Harvard.jpg" />
+    <Content Include="images\Hydrangeas.jpg" />
+    <Content Include="images\IIT.jpg" />
+    <Content Include="images\IoSU.jpg" />
+    <Content Include="images\ishan3041.png" />
+    <Content Include="images\ISU.jpg" />
+    <Content Include="images\Jellyfish.jpg" />
+    <Content Include="images\Kaustubh.jpg" />
+    <Content Include="images\kborole71.png" />
+    <Content Include="images\kborole7Chrysanthemum.jpg" />
+    <Content Include="images\kborole7kaus.png" />
+    <Content Include="images\kborole7kb.png" />
+    <Content Include="images\kborole7Lighthouse.jpg" />
+    <Content Include="images\kborole7rohan.png" />
+    <Content Include="images\Koala.jpg" />
+    <Content Include="images\NIU.jpg" />
+    <Content Include="images\output.txt" />
+    <Content Include="images\Penguins.jpg" />
+    <Content Include="images\Princeton.jpg" />
+    <Content Include="images\Rohan.jpg" />
+    <Content Include="images\rvpisalrohan.png" />
+    <Content Include="images\San_diego.jpg" />
+    <Content Include="images\sbhatKoala.jpg" />
+    <Content Include="images\shalaka17shalaka.png" />
+    <Content Include="images\Shweta.jpg" />
+    <Content Include="images\shweta14shweta.png" />
+    <Content Include="images\Stanford.jpg" />
+    <Content Include="images\Tulips.jpg" />
+    <Content Include="images\UIC.jpg" />
+    <Content Include="images\university-search.png" />
+    <Content Include="images\University_of_IOWA.jpg" />
+    <Content Include="MeetTheTeam.aspx" />
+    <Content Include="profilevisits.aspx" />
+    <Content Include="Schedule_Appointment.aspx" />
+    <Content Include="Mark_University.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="RecruiterContact.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Site1.Master" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="SOP\consent.pdf" />
+    <Content Include="SOP\PlannitWalkthrough.pdf" />
+    <Content Include="SOP\show.pdf" />
+    <Content Include="SOP\test1.pdf" />
+    <Content Include="StudentContact.aspx" />
+    <Content Include="TRANSCRIPT\consent.pdf" />
+    <Content Include="TRANSCRIPT\PlannitWalkthrough.pdf" />
+    <Content Include="TRANSCRIPT\show.pdf" />
+    <Content Include="TRANSCRIPT\test1.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apply_University.aspx" />
+    <Content Include="Changedp.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="Collage.jpg" />
+    <Content Include="Compare_University.aspx" />
+    <Content Include="css\application.css" />
+    <Content Include="css\docs.css" />
+    <Content Include="css\toolkit.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="generic-user.png" />
+    <Content Include="Homepage.aspx" />
+    <Content Include="LinkedUSubscription.aspx" />
+    <Content Include="logo.JPG" />
+    <Content Include="Membership.aspx" />
+    <Content Include="Mixtapes\Hockey drill - wide dribble drill.mp4" />
+    <Content Include="Mixtapes\How to play ping pong alone.mp4" />
+    <Content Include="Mixtapes\Sylhet taigers cricket centre net practice.mp4" />
+    <Content Include="Profile.aspx" />
+    <Content Include="ProfileUpdate.aspx" />
+    <Content Include="SearchStudent.aspx" />
+    <Content Include="Search_University.aspx" />
+    <Content Include="Signinstyle.css" />
+    <Content Include="SimilarVideos.aspx" />
+    <Content Include="Student_Profile.aspx" />
+    <Content Include="Subscription.aspx" />
+    <Content Include="University_Profile.aspx" />
+    <Content Include="University_Reported.aspx" />
+    <Content Include="Update.aspx" />
+    <Content Include="Update_University.aspx" />
+    <Content Include="UploadVideo.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_University.aspx.cs">
+      <DependentUpon>Add_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add_University.aspx.designer.cs">
+      <DependentUpon>Add_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Apply_University.aspx.cs">
+      <DependentUpon>Apply_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Apply_University.aspx.designer.cs">
+      <DependentUpon>Apply_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MeetTheTeam.aspx.cs">
+      <DependentUpon>MeetTheTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MeetTheTeam.aspx.designer.cs">
+      <DependentUpon>MeetTheTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profilevisits.aspx.cs">
+      <DependentUpon>profilevisits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profilevisits.aspx.designer.cs">
+      <DependentUpon>profilevisits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule_Appointment.aspx.cs">
+      <DependentUpon>Schedule_Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Schedule_Appointment.aspx.designer.cs">
+      <DependentUpon>Schedule_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Changedp.aspx.cs">
+      <DependentUpon>Changedp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Changedp.aspx.designer.cs">
+      <DependentUpon>Changedp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compare_University.aspx.cs">
+      <DependentUpon>Compare_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compare_University.aspx.designer.cs">
+      <DependentUpon>Compare_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinkedUSubscription.aspx.cs">
+      <DependentUpon>LinkedUSubscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinkedUSubscription.aspx.designer.cs">
+      <DependentUpon>LinkedUSubscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mark_University.aspx.cs">
+      <DependentUpon>Mark_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mark_University.aspx.designer.cs">
+      <DependentUpon>Mark_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Membership.aspx.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Membership.aspx.designer.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileUpdate.aspx.cs">
+      <DependentUpon>ProfileUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileUpdate.aspx.designer.cs">
+      <DependentUpon>ProfileUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecruiterContact.aspx.cs">
+      <DependentUpon>RecruiterContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecruiterContact.aspx.designer.cs">
+      <DependentUpon>RecruiterContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStudent.aspx.cs">
+      <DependentUpon>SearchStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchStudent.aspx.designer.cs">
+      <DependentUpon>SearchStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search_University.aspx.cs">
+      <DependentUpon>Search_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search_University.aspx.designer.cs">
+      <DependentUpon>Search_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SimilarVideos.aspx.cs">
+      <DependentUpon>SimilarVideos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SimilarVideos.aspx.designer.cs">
+      <DependentUpon>SimilarVideos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentContact.aspx.cs">
+      <DependentUpon>StudentContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentContact.aspx.designer.cs">
+      <DependentUpon>StudentContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Profile.aspx.cs">
+      <DependentUpon>Student_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_Profile.aspx.designer.cs">
+      <DependentUpon>Student_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Subscription.aspx.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subscription.aspx.designer.cs">
+      <DependentUpon>Subscription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="University_Profile.aspx.cs">
+      <DependentUpon>University_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University_Profile.aspx.designer.cs">
+      <DependentUpon>University_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="University_Reported.aspx.cs">
+      <DependentUpon>University_Reported.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="University_Reported.aspx.designer.cs">
+      <DependentUpon>University_Reported.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update_University.aspx.cs">
+      <DependentUpon>Update_University.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update_University.aspx.designer.cs">
+      <DependentUpon>Update_University.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadVideo.aspx.cs">
+      <DependentUpon>UploadVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadVideo.aspx.designer.cs">
+      <DependentUpon>UploadVideo.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57197</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57197/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

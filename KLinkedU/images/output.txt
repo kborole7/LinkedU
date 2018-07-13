@@ -1,0 +1,14 @@
+Berkeley-college.jpg
+Boston.jpg
+Columbia.jpg
+Cornell.jpg
+Harvard.jpg
+IIT.jpg
+IoSU.jpg
+ISU.jpg
+NIU.jpg
+Princeton.jpg
+San_diego.jpg
+Stanford.jpg
+UIC.jpg
+University_of_IOWA.jpg
